@@ -612,6 +612,15 @@
             scripts: {
                 js: ['in-page-scripts/integrations/notion.js']
             }
+        },
+        {
+            serviceType: 'Clubhouse',
+            serviceName: 'Clubhouse',
+            icon: null,
+            origins: ['https://app.clubhouse.io/*'],
+            scripts: {
+                js: ['in-page-scripts/integrations/clubhouse.js']
+            }
         }
     ];
 
