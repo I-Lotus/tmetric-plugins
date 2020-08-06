@@ -6,7 +6,7 @@ class Clubhouse implements WebToolIntegration {
   observeMutations = true;
 
   issueElementSelector = [
-    ".story-container"
+    ".story-attributes"
   ];
 
   getIssue(issueElement: HTMLElement, source: Source): WebToolIssue {
@@ -27,11 +27,13 @@ class Clubhouse implements WebToolIntegration {
   }
 
   render(issueElement: HTMLElement, linkElement: HTMLElement) {
-    const host = $$('.story-date-updated', issueElement);
+    const host = $$('.story-id', issueElement);
     if (host) {
       linkElement.classList.add("action");
       linkElement.classList.add("flat-white");
       linkElement.style.marginTop = "15px";
+      linkElement.style.width = "100%";
+      linkElement.style.textAlign = "center";
       host.appendChild(linkElement);
     }
   }
